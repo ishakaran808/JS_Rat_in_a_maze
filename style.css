@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #388fa9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#maze-container {
+    border: 10px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    border-radius: 10px;
+}
+
+#maze-container #message {
+    visibility: hidden;
+    color: black;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background-color: blacks; */
+    /* background-color: rgba(0, 0, 0, 0.30); */
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    font-size: 100px;
+}
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid rgb(194, 194, 194); */
+    background-color: white;
+}
+
+.wall {
+    background-color: black;
+    /* border: 1px solid black; */
+}
+
+#rat {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+#food {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+select {
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+}
