@@ -4,20 +4,21 @@
 }
 
 body {
-    background-color: #388fa9;
+    background-color: #3aaa90;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    /* height: 150vh; */
 }
 
 h1 {
     font-size: 50px;
     color: white;
+    margin-top: 20px;
     margin-bottom: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #maze-container {
@@ -28,6 +29,16 @@ h1 {
     width: max-content;
     height: max-content;
     border-radius: 10px;
+}
+
+#para{
+    font-size: 50px;
+    color: rgb(21, 36, 49);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    display: none;
+    /* border: 10px solid red; */
 }
 
 #maze-container #message {

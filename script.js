@@ -83,18 +83,25 @@ let mazearray = level1;
 let Level = document.getElementById("levelselect");
 Level.addEventListener("change", function () {
     let level = Level.value;
-    // console.log(level);
     if (level == 1) {
+        let curr=document.getElementById("para");
+        curr.style.display="none";
         mazearray = level1;
     }
     if (level == 2) {
+        let curr=document.getElementById("para");
+        curr.style.display="none";
         mazearray = level2;
     }
     if (level == 3) {
+        let curr=document.getElementById("para");
+        curr.style.display="none";
         mazearray = level3;
     }
     if (level == 4) {
         mazearray = level4;
+        let curr=document.getElementById("para");
+        curr.style.display="none";
     }
     maze.innerHTML =
         `<img src="rat.png" id ="rat" width="20px" height="20px" alt="rat" >
@@ -172,9 +179,6 @@ document.addEventListener("keydown", function (e) {
     let ratposition = getratposition();
 
 
-
-
-    // console.log(ratleft, rattop);
     if (e.key == "ArrowRight" && ratleft < (mazearray.length - 1) * 20 && mazearray[ratposition[0]][ratposition[1] + 1] == 1) {
         ratleft += 20;
         rat.style.left = ratleft + "px";
@@ -213,6 +217,8 @@ document.addEventListener("keydown", function (e) {
 })
 
 function displayVictoryMess() {
-    // let winner = document.getElementsByTagName("body")[0];
-    document.body.style.backgroundColor = "#5ca938";
+    let win = document.getElementById("para");
+    win.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // document.body.style.backgroundColor = "#5ca938";
 }
